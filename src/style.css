@@ -1,0 +1,81 @@
+.card-btn-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: black;
+}
+
+.post-thumbnail {
+  font-size: 3em;
+}
+
+.post-header p {
+  line-height: 0.75rem;
+}
+
+.contacts-suggested .body {
+  height: 100%;
+}
+
+.contacts-suggested .body .cover-image {
+  height: 55%;
+  overflow: hidden;
+}
+
+.contacts-suggested .footer {
+  height: 30px;
+  position: relative;
+}
+
+.profile-highlights div {
+  line-height: 1rem;
+}
+
+.user-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.user-card .cover-image {
+  height: 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: darkslategrey;
+  margin-bottom: 35px;
+}
+
+.user-card .profile {
+  height: 75px;
+  width: 75px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: chocolate;
+  margin-left: 0.5em;
+  top: 60px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.user-card .summary h3 {
+  line-height: 1rem;
+}
+
+.contact-thumbnail {
+  height: 50px;
+  width: 50px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: chocolate;
+}
+
+.widget.home-contacts .widget-body ul.contact-list {
+  display: inline-flex;
+}
+
+.widget.home-contacts
+  .widget-body
+  ul.contact-list
+  :not(:first-child):not(:last-child) {
+  margin-left: -10px;
+}
