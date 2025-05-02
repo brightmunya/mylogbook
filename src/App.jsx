@@ -12,6 +12,7 @@ import PostTradeItem from "./components/feedComponents/PostTradeItem";
 import PostQSL from "./components/feedComponents/PostQSL";
 import UserCard from "./components/userComponents/UserCard";
 import HomeContactsWidget from "./components/widgets/HomeContactsWidget";
+import SuggestedContactList from "./components/userComponents/SuggestedContactList";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -56,12 +57,7 @@ function App() {
           {/* <CreatePost></CreatePost> */}
           {/* <CreateBuySellSwap></CreateBuySellSwap> */}
           {/* <CreateLog></CreateLog> */}
-          <div className="grid gap-2 grid-cols-4 mb-3">
-            <SuggestedContact></SuggestedContact>
-            <div className="h-40 bg-white p-2 border border-gray-300 rounded-md "></div>
-            <div className="h-40 bg-white p-2 border border-gray-300 rounded-md "></div>
-            <div className="h-40 bg-white p-2 border border-gray-300 rounded-md"></div>
-          </div>
+          <SuggestedContactList></SuggestedContactList>
           <FeedComponent></FeedComponent>
           <div className="w-full  bg-white p-2 border border-gray-300 rounded-md mb-3">
             <PostTradeItem></PostTradeItem>
