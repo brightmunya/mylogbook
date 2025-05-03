@@ -1,5 +1,5 @@
-import PostActions from "./PostActions";
-import PostHeader from "./PostHeader";
+import PostActions from "./PostActions"
+import PostHeader from "./PostHeader"
 const PostItem = () => {
   return (
     <>
@@ -15,11 +15,9 @@ const PostItem = () => {
           <img src={`/images/Amateurfunkstation.jpg`} />
         </div>
       </div>
-      <div className="mx-2">
-        <PostActions></PostActions>
-      </div>
+      <PostActions></PostActions>
     </>
-  );
-};
+  )
+}
 
-export default PostItem;
+export default PostItem

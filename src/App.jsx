@@ -1,24 +1,25 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { useState } from "react"
+import reactLogo from "./assets/react.svg"
+import viteLogo from "/vite.svg"
 
-import Navbar from "./components/Navbar";
-import CreateLog from "./components/CreateLog";
-import CreateBuySellSwap from "./components/CreateBuySellSwap";
-import CreatePost from "./components/CreatePost";
-import FeedComponent from "./components/feedComponents/FeedComponent";
-import SuggestedContact from "./components/userComponents/SuggestedContact";
-import PostTradeItem from "./components/feedComponents/PostTradeItem";
-import PostQSL from "./components/feedComponents/PostQSL";
-import UserCard from "./components/userComponents/UserCard";
-import HomeContactsWidget from "./components/widgets/HomeContactsWidget";
-import SuggestedContactList from "./components/userComponents/SuggestedContactList";
+import Navbar from "./components/Navbar"
+import CreateLog from "./components/CreateLog"
+import CreateBuySellSwap from "./components/CreateBuySellSwap"
+import CreatePost from "./components/CreatePost"
+import FeedComponent from "./components/feedComponents/FeedComponent"
+import SuggestedContact from "./components/userComponents/SuggestedContact"
+import PostTradeItem from "./components/feedComponents/PostTradeItem"
+import PostQSL from "./components/feedComponents/PostQSL"
+import UserCard from "./components/userComponents/UserCard"
+import HomeContactsWidget from "./components/widgets/HomeContactsWidget"
+import SuggestedContactList from "./components/userComponents/SuggestedContactList"
+import PostItem from "./components/feedComponents/PostItem"
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
   const styleButtonPrimary =
-    "border rounded-md w-full border-gray-400 h-full text-[12px]";
-  const styleCard = "bg-white border border-gray-300 rounded-lg mb-2 p-2";
+    "border rounded-md w-full border-gray-400 h-full text-[12px]"
+  const styleCard = "bg-white border border-gray-300 rounded-lg mb-2 p-2"
   return (
     <>
       <div>
@@ -54,17 +55,26 @@ function App() {
               </div>
             </div>
           </div>
-          {/* <CreatePost></CreatePost> */}
+
+          <CreatePost></CreatePost>
           {/* <CreateBuySellSwap></CreateBuySellSwap> */}
           {/* <CreateLog></CreateLog> */}
           <SuggestedContactList></SuggestedContactList>
-          <FeedComponent></FeedComponent>
-          <div className="w-full  bg-white p-2 border border-gray-300 rounded-md mb-3">
+          <FeedComponent>
+            <PostItem></PostItem>
+          </FeedComponent>
+          <FeedComponent>
             <PostTradeItem></PostTradeItem>
-          </div>
-          <div className="w-full min-h-50 bg-white border border-gray-300 rounded-md mb-3">
+          </FeedComponent>
+          <FeedComponent>
+            <PostTradeItem></PostTradeItem>
+          </FeedComponent>
+          <FeedComponent>
             <PostQSL></PostQSL>
-          </div>
+          </FeedComponent>
+          <FeedComponent>
+            <PostItem></PostItem>
+          </FeedComponent>
         </div>
         <div className="w-50">
           <div className="pb-3">
@@ -84,7 +94,7 @@ function App() {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

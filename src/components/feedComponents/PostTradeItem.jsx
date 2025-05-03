@@ -1,10 +1,10 @@
-import PostActions from "./PostActions";
-import PostHeader from "./PostHeader";
+import PostActions from "./PostActions"
+import PostHeader from "./PostHeader"
 
 const PostTradeItem = () => {
   return (
-    <div>
-      <div className="post-category ">
+    <>
+      <div className="post-category px-2">
         <div className="border-b-1 border-gray-300 pb-1">
           <div className="text-[0.8rem]">Market</div>
         </div>
@@ -34,8 +34,8 @@ const PostTradeItem = () => {
         </div>
       </div>
       <PostActions></PostActions>
-    </div>
-  );
-};
+    </>
+  )
+}
 
-export default PostTradeItem;
+export default PostTradeItem

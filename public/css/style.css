@@ -73,9 +73,34 @@
   display: inline-flex;
 }
 
-.widget.home-contacts
-  .widget-body
-  ul.contact-list
-  :not(:first-child):not(:last-child) {
+.widget.home-contacts .widget-body ul.contact-list :not(:first-child) {
   margin-left: -10px;
+}
+
+.courosel .pager .arrow button {
+  width: 50px;
+  height: 50px;
+  background-color: #42424283;
+  border-radius: 50%;
+  font-size: 3rem;
+  line-height: 0;
+}
+.courosel .pager {
+  position: relative;
+}
+.courosel .pager .arrow {
+  position: absolute;
+  top: 3%;
+  transform: translateY(50%);
+  visibility: hidden;
+}
+
+.courosel .pager .arrow.right {
+  right: 0;
+}
+.courosel .pager.has-next > .arrow.right {
+  visibility: visible;
+}
+.courosel .pager.has-prev > .arrow.left {
+  visibility: visible;
 }

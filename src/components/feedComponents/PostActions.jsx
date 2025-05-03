@@ -1,6 +1,6 @@
 const PostActions = () => {
   return (
-    <div className="post-actions">
+    <div className="post-actions mx-2">
       <div className="border-t-1 border-b-1 border-gray-300 my-2">
         <div className="flex justify-around p-1">
           <div>
@@ -30,7 +30,7 @@ const PostActions = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PostActions;
+export default PostActions

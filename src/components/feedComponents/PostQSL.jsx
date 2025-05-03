@@ -1,5 +1,5 @@
-import PostActions from "./PostActions";
-import PostHeader from "./PostHeader";
+import PostActions from "./PostActions"
+import PostHeader from "./PostHeader"
 const PostQSL = () => {
   return (
     <>
@@ -9,11 +9,9 @@ const PostQSL = () => {
           <img src={`/images/qsl-double-example-2-both.jpg`} />
         </div>
       </div>
-      <div className="mx-2">
-        <PostActions></PostActions>
-      </div>
+      <PostActions></PostActions>
     </>
-  );
-};
+  )
+}
 
-export default PostQSL;
+export default PostQSL
