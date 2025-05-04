@@ -15,10 +15,14 @@ const SuggestedContactList = () => {
       <div className="courosel">
         <div className="pager flex justify-between has-next ">
           <div className="left arrow ">
-            <button>&lt;</button>
+            <button>
+              <i className="icon-[line-md--chevron-left] text-xl"></i>
+            </button>
           </div>
           <div className="right arrow">
-            <button>&gt;</button>
+            <button>
+              <i className="icon-[line-md--chevron-right] text-xl"></i>
+            </button>
           </div>
         </div>
         <div className="grid gap-2 grid-cols-4 mb-3 grid-rows-1">
