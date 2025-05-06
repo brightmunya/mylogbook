@@ -3,9 +3,9 @@ import reactLogo from "./assets/react.svg"
 import viteLogo from "/vite.svg"
 
 import Navbar from "./components/Navbar"
-import CreateLog from "./components/CreateLog"
-import CreateBuySellSwap from "./components/CreateBuySellSwap"
-import CreatePost from "./components/CreatePost"
+import CreateLog from "./components/createPosts/CreateLog"
+import CreateBuySellSwap from "./components/createPosts/CreateBuySellSwap"
+import CreatePost from "./components/createPosts/CreatePost"
 import FeedComponent from "./components/feedComponents/FeedComponent"
 import SuggestedContact from "./components/userComponents/SuggestedContact"
 import PostTradeItem from "./components/feedComponents/PostTradeItem"
@@ -14,6 +14,7 @@ import UserCard from "./components/userComponents/UserCard"
 import HomeContactsWidget from "./components/widgets/HomeContactsWidget"
 import SuggestedContactList from "./components/userComponents/SuggestedContactList"
 import PostItem from "./components/feedComponents/PostItem"
+import CreatePostsWrapper from "./components/createPosts/CreatePostsWrapper"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -40,25 +41,7 @@ function App() {
           </div>
         </div>
         <div className="flex-1 px-2 ">
-          <div className="bg-gray-200 rounded-lg p-2 mb-2">
-            <div className="grid grid-cols-3 gap-2 ">
-              <div className="h-8 ">
-                <button className="text-sm h-full w-full bg-white rounded-md">
-                  Relay
-                </button>
-              </div>
-              <div className="h-8 ">
-                <button className="text-sm h-full w-full">Log</button>
-              </div>
-              <div className="h-8 ">
-                <button className="text-sm h-full w-full">Buy/Sell/Swap</button>
-              </div>
-            </div>
-          </div>
-
-          <CreatePost></CreatePost>
-          {/* <CreateBuySellSwap></CreateBuySellSwap> */}
-          {/* <CreateLog></CreateLog> */}
+          <CreatePostsWrapper></CreatePostsWrapper>
           <SuggestedContactList></SuggestedContactList>
           <FeedComponent>
             <PostItem></PostItem>
