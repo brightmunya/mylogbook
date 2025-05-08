@@ -3,9 +3,9 @@ import SuggestedContact from "./SuggestedContact"
 
 const SuggestedContactList = () => {
   const topXContacts = contacts.slice(0, 4)
-  console.log(topXContacts)
-  const listContacts = topXContacts.map((contact) => (
-    <SuggestedContact contact={contact}></SuggestedContact>
+
+  const listContacts = topXContacts.map((contact, i) => (
+    <SuggestedContact key={i} contact={contact}></SuggestedContact>
   ))
   const styleButtonPrimary =
     "border rounded-md w-full border-gray-400 h-full text-[10px]"

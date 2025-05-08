@@ -16,17 +16,54 @@ const CreateLog = () => {
   const [mode, setMode] = useState("AM")
   const [newLog, setNewLog] = useState({
     frequency: "000.000.000",
-    mode: "AM",
+    mode: "FM",
     callsign: "",
     contactName: "",
     rstTX: "5/9",
     rstRX: "5/9",
-    commDate: "2025/05/05",
-    commTime: "08:18 AM"
+    commDate: new Date().toISOString().split("T")[0],
+    commTime: displayTime(new Date())
   })
+
+  function displayTime(d) {
+    let date = new Date(d)
+    let h = date.getHours()
+    let m = date.getMinutes()
+    return `${formatDisplayValue(h)}:${formatDisplayValue(m)}`
+  }
+
+  function formatDisplayValue(i) {
+    if (parseInt(i) < 10) {
+      i = "0" + i
+    }
+
+    return i
+  }
+
   function changeFrequencyMode(m) {
     setMode(m)
+    setNewLog({ ...newLog, mode: m })
   }
+
+  function iptFrequency_keydown(e) {
+    let value = parseInt(e.key)
+    if (Number.isInteger(value)) {
+      let currentVal = newLog.frequency
+      let frequency = currentVal.split("")
+      frequency.push(value)
+      frequency.shift()
+      let freq = frequency.filter((item) => item !== ".")
+      freq.splice(3, 0, ".")
+      freq.splice(7, 0, ".")
+      let updateFrequency = freq.join("")
+      setNewLog({ ...newLog, frequency: updateFrequency })
+    }
+  }
+
+  function iptFrequency_focus() {
+    document.getElementById("iptCaptureFrequency")
+  }
+
   return (
     <div className="w-full bg-white border border-gray-300 rounded-lg mb-3">
       <div className={styleCardHeader}>
@@ -46,6 +83,10 @@ const CreateLog = () => {
               type="date"
               className={styleFormControl}
               placeholder="Date"
+              value={newLog.commDate}
+              onChange={(e) => {
+                setNewLog({ ...newLog, commDate: e.target.value })
+              }}
             ></input>
           </div>
           <div>
@@ -53,16 +94,26 @@ const CreateLog = () => {
               type="time"
               className={styleFormControl}
               placeholder="Time"
+              value={newLog.commTime}
+              onChange={(e) => {
+                setNewLog({ ...newLog, commDate: e.target.value })
+              }}
             ></input>
           </div>
         </div>
         <div className="h-12 mb-2">
           <input
+            id="iptFrequency"
             maxLength="11"
-            value="000.000.000"
+            value={newLog.frequency}
             type="text"
             className="border border-gray-300 w-full h-full p-2 text-3xl text-center rounded-md"
             pattern="\d\d\d\.\d\d\d\.\d\d\d"
+            onKeyDown={iptFrequency_keydown}
+            onChange={(e) => {
+              console.log("frequency changed")
+              //setNewLog({ ...newLog, frequency: e.target.value })
+            }}
           ></input>
         </div>
         <div className="grid grid-cols-8 md:grid-cols-8 gap-1">
@@ -70,7 +121,9 @@ const CreateLog = () => {
             <button
               onClick={() => changeFrequencyMode("AM")}
               className={
-                mode == "AM" ? styleButtonRadioPrimary : styleButtonPrimary
+                newLog.mode == "AM"
+                  ? styleButtonRadioPrimary
+                  : styleButtonPrimary
               }
             >
               AM
@@ -80,7 +133,9 @@ const CreateLog = () => {
             <button
               onClick={() => changeFrequencyMode("FM")}
               className={
-                mode == "FM" ? styleButtonRadioPrimary : styleButtonPrimary
+                newLog.mode == "FM"
+                  ? styleButtonRadioPrimary
+                  : styleButtonPrimary
               }
             >
               FM
@@ -90,7 +145,9 @@ const CreateLog = () => {
             <button
               onClick={() => changeFrequencyMode("USB")}
               className={
-                mode == "USB" ? styleButtonRadioPrimary : styleButtonPrimary
+                newLog.mode == "USB"
+                  ? styleButtonRadioPrimary
+                  : styleButtonPrimary
               }
             >
               USB
@@ -100,7 +157,9 @@ const CreateLog = () => {
             <button
               onClick={() => changeFrequencyMode("LSB")}
               className={
-                mode == "LSB" ? styleButtonRadioPrimary : styleButtonPrimary
+                newLog.mode == "LSB"
+                  ? styleButtonRadioPrimary
+                  : styleButtonPrimary
               }
             >
               LSB
@@ -110,7 +169,9 @@ const CreateLog = () => {
             <button
               onClick={() => changeFrequencyMode("CW")}
               className={
-                mode == "CW" ? styleButtonRadioPrimary : styleButtonPrimary
+                newLog.mode == "CW"
+                  ? styleButtonRadioPrimary
+                  : styleButtonPrimary
               }
             >
               CW
@@ -120,7 +181,9 @@ const CreateLog = () => {
             <button
               onClick={() => changeFrequencyMode("PSK")}
               className={
-                mode == "PSK" ? styleButtonRadioPrimary : styleButtonPrimary
+                newLog.mode == "PSK"
+                  ? styleButtonRadioPrimary
+                  : styleButtonPrimary
               }
             >
               PSK
@@ -130,7 +193,9 @@ const CreateLog = () => {
             <button
               onClick={() => changeFrequencyMode("RTTY")}
               className={
-                mode == "RTTY" ? styleButtonRadioPrimary : styleButtonPrimary
+                newLog.mode == "RTTY"
+                  ? styleButtonRadioPrimary
+                  : styleButtonPrimary
               }
             >
               RTTY
@@ -140,7 +205,9 @@ const CreateLog = () => {
             <button
               onClick={() => changeFrequencyMode("ECHO")}
               className={
-                mode == "ECHO" ? styleButtonRadioPrimary : styleButtonPrimary
+                newLog.mode == "ECHO"
+                  ? styleButtonRadioPrimary
+                  : styleButtonPrimary
               }
             >
               ECHO
