@@ -4,19 +4,18 @@ import CreateLog from "./CreateLog"
 import CreatePost from "./CreatePost"
 const CreatePostsWrapper = () => {
   const [showNewPostForm, setShowNewPostForm] = useState("")
-  const [activeForm, setActiveForm] = useState("")
-  function OpenNewPostForm() {
-    setShowNewPostForm(<CreatePost></CreatePost>)
-    setActiveForm("post")
-  }
-  function OpenNewLogForm() {
-    setShowNewPostForm(<CreateLog></CreateLog>)
-    setActiveForm("log")
-  }
-  function OpenNewBuySellForm() {
-    setShowNewPostForm(<CreateBuySellSwap></CreateBuySellSwap>)
-    setActiveForm("buysellswap")
-  }
+  const [activeForm, setActiveForm] = useState(0)
+  const aForm =
+    activeForm == 1 ? (
+      <CreatePost onClose={() => setActiveForm(0)}></CreatePost>
+    ) : activeForm == 2 ? (
+      <CreateLog onClose={() => setActiveForm(0)}></CreateLog>
+    ) : activeForm == 3 ? (
+      <CreateBuySellSwap onClose={() => setActiveForm(0)}></CreateBuySellSwap>
+    ) : (
+      ""
+    )
+
   return (
     <>
       <div className="bg-gray-200 rounded-lg p-2 mb-2">
@@ -25,9 +24,9 @@ const CreatePostsWrapper = () => {
             <button
               className={
                 "text-sm h-full w-full rounded-md " +
-                (activeForm == "post" ? "bg-white" : "")
+                (activeForm == 1 ? "bg-white" : "")
               }
-              onClick={OpenNewPostForm}
+              onClick={() => setActiveForm(1)}
             >
               Relay
             </button>
@@ -36,9 +35,9 @@ const CreatePostsWrapper = () => {
             <button
               className={
                 "text-sm h-full w-full rounded-md " +
-                (activeForm == "log" ? "bg-white" : "")
+                (activeForm == 2 ? "bg-white" : "")
               }
-              onClick={OpenNewLogForm}
+              onClick={() => setActiveForm(2)}
             >
               Log
             </button>
@@ -47,9 +46,9 @@ const CreatePostsWrapper = () => {
             <button
               className={
                 "text-sm h-full w-full rounded-md " +
-                (activeForm == "buysellswap" ? "bg-white" : "")
+                (activeForm == 3 ? "bg-white" : "")
               }
-              onClick={OpenNewBuySellForm}
+              onClick={() => setActiveForm(3)}
             >
               Buy/Sell/Swap
             </button>
@@ -57,7 +56,7 @@ const CreatePostsWrapper = () => {
         </div>
       </div>
 
-      {showNewPostForm}
+      {aForm}
 
       {/* <CreateBuySellSwap></CreateBuySellSwap> */}
       {/* <CreateLog></CreateLog> */}

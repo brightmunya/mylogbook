@@ -1,2 +1,4 @@
-const InputFrequencyWidget = () => {}
+const InputFrequencyWidget = () => {
+  return <></>
+}
 export default InputFrequencyWidget

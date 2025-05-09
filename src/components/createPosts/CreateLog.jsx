@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const CreateLog = () => {
+const CreateLog = ({ onClose }) => {
   const styleFormControl = "w-full border rounded-md border-gray-400 py-1 px-2"
   const styleButtonActive =
     "border rounded-md w-full border-gray-900 h-full text-[10px]"
@@ -60,16 +60,12 @@ const CreateLog = () => {
     }
   }
 
-  function iptFrequency_focus() {
-    document.getElementById("iptCaptureFrequency")
-  }
-
   return (
     <div className="w-full bg-white border border-gray-300 rounded-lg mb-3">
       <div className={styleCardHeader}>
         <div className="float-right">
           <button>
-            <span className="icon-[line-md--close]"></span>
+            <span className="icon-[line-md--close]" onClick={onClose}></span>
           </button>
         </div>
         <div>
@@ -102,19 +98,33 @@ const CreateLog = () => {
           </div>
         </div>
         <div className="h-12 mb-2">
-          <input
-            id="iptFrequency"
-            maxLength="11"
-            value={newLog.frequency}
-            type="text"
-            className="border border-gray-300 w-full h-full p-2 text-3xl text-center rounded-md"
-            pattern="\d\d\d\.\d\d\d\.\d\d\d"
-            onKeyDown={iptFrequency_keydown}
-            onChange={(e) => {
-              console.log("frequency changed")
-              //setNewLog({ ...newLog, frequency: e.target.value })
-            }}
-          ></input>
+          <div className="relative">
+            <div className=" w-full h-[3rem] absolute ">
+              <input
+                id="iptFrequency"
+                maxLength="11"
+                value={newLog.frequency}
+                type="text"
+                className="border border-gray-300 w-full h-full p-2 text-3xl text-center rounded-md"
+                pattern="\d\d\d\.\d\d\d\.\d\d\d"
+                onKeyDown={iptFrequency_keydown}
+                onChange={(e) => {
+                  console.log("frequency changed")
+                  //setNewLog({ ...newLog, frequency: e.target.value })
+                }}
+              ></input>
+            </div>
+            <div className="float-right me-1">
+              <button
+                onClick={() => {
+                  setNewLog({ ...newLog, frequency: "000.000.000" })
+                  document.getElementById("iptFrequency").focus()
+                }}
+              >
+                <i className="icon-[line-md--close-circle] text-md"></i>
+              </button>
+            </div>
+          </div>
         </div>
         <div className="grid grid-cols-8 md:grid-cols-8 gap-1">
           <div className="h-8">
@@ -236,7 +246,9 @@ const CreateLog = () => {
             <button className={styleButtonSubmit}>Post</button>
           </div>
           <div className="h-8 ">
-            <button className={styleButtonCancel}>Cancel</button>
+            <button className={styleButtonCancel} onClick={onClose}>
+              Cancel
+            </button>
           </div>
         </div>
       </div>
