@@ -1,18 +1,18 @@
 import PostActions from "./PostActions"
 import PostHeader from "./PostHeader"
-const PostItem = () => {
+const PostItem = ({ post }) => {
+ 
   return (
     <>
-      <PostHeader></PostHeader>
+      <PostHeader postType={post.category} user={post.user}></PostHeader>
       <div className="post-body">
         <div className="post-text py-1 px-3">
           <p className="text-[11pt]">
-            found this pict last night, my first setup. the joys of that first
-            moment when you make your first connection over the airwaves.
+            {post.message}
           </p>
         </div>
         <div className="py-2 px-0">
-          <img src={`/images/Amateurfunkstation.jpg`} />
+          <img src={post.photos[0]} width='100%'/>
         </div>
       </div>
       <PostActions></PostActions>

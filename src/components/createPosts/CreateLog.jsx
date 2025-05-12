@@ -92,7 +92,7 @@ const CreateLog = ({ onClose }) => {
               placeholder="Time"
               value={newLog.commTime}
               onChange={(e) => {
-                setNewLog({ ...newLog, commDate: e.target.value })
+                setNewLog({ ...newLog, commTime: e.target.value })
               }}
             ></input>
           </div>

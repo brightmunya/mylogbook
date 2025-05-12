@@ -1,13 +1,7 @@
 import { useState } from "react"
-import reactLogo from "./assets/react.svg"
-import viteLogo from "/vite.svg"
 
 import Navbar from "./components/Navbar"
-import CreateLog from "./components/createPosts/CreateLog"
-import CreateBuySellSwap from "./components/createPosts/CreateBuySellSwap"
-import CreatePost from "./components/createPosts/CreatePost"
 import FeedComponent from "./components/feedComponents/FeedComponent"
-import SuggestedContact from "./components/userComponents/SuggestedContact"
 import PostTradeItem from "./components/feedComponents/PostTradeItem"
 import PostQSL from "./components/feedComponents/PostQSL"
 import UserCard from "./components/userComponents/UserCard"
@@ -17,11 +11,14 @@ import PostItem from "./components/feedComponents/PostItem"
 import CreatePostsWrapper from "./components/createPosts/CreatePostsWrapper"
 
 function App() {
-  const [count, setCount] = useState(0)
   const styleButtonPrimary =
     "border rounded-md w-full border-gray-400 h-full text-[12px]"
   const styleCard = "bg-white border border-gray-300 rounded-lg mb-2 p-2"
+
+  
+
   return (
+    
     <>
       <div>
         <Navbar></Navbar>
@@ -44,6 +41,8 @@ function App() {
           <CreatePostsWrapper></CreatePostsWrapper>
           <SuggestedContactList></SuggestedContactList>
           <FeedComponent>
+          </FeedComponent>
+          {/* <FeedComponent>
             <PostItem></PostItem>
           </FeedComponent>
           <FeedComponent>
@@ -56,8 +55,8 @@ function App() {
             <PostQSL></PostQSL>
           </FeedComponent>
           <FeedComponent>
-            <PostItem></PostItem>
-          </FeedComponent>
+            <PostItem post={newsfeed[1]}></PostItem>
+          </FeedComponent> */}
         </div>
         <div className="w-50">
           <div className="pb-3">

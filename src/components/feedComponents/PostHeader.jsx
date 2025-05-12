@@ -1,4 +1,4 @@
-const PostHeader = ({ postType = 1 }) => {
+const PostHeader = ({ postType = 1 , user}) => {
   let headerText =
     postType == "2"
       ? "is selling"
@@ -15,9 +15,9 @@ const PostHeader = ({ postType = 1 }) => {
       </div>
       <div className="flex-1 ps-2 ">
         <div className="">
-          <div className="title">ARJ908W (Johnson Smith) {headerText}</div>
+          <div className="title">{user.callsign} ({user.name}) {headerText}</div>
           <p className="location">
-            <small>South Africa</small>&nbsp;&bull;&nbsp;
+            <small>{user.country}</small>&nbsp;&bull;&nbsp;
             <small>posted a day ago</small>
           </p>
         </div>
