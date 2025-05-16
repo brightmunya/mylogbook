@@ -5,7 +5,7 @@ const SuggestedContact = ({ contact }) => {
     <div className="h-full bg-white p-2 border border-gray-300 rounded-md contacts-suggested ">
       <div className="body flex flex-col">
         <div className="cover-image ">
-          <img src={"/" + contact.profile} />
+          <img src={"/" + contact.profile} className="h-[150px]" />
         </div>
         <div className="profile-highlights flex-1">
           <div>{contact.name}</div>

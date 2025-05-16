@@ -104,3 +104,6 @@
 .courosel .pager.has-prev > .arrow.left {
   visibility: visible;
 }
+.swiper {
+  width: 600px;
+}
