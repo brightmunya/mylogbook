@@ -1,7 +1,7 @@
 import PostActions from "./PostActions"
 import PostHeader from "./PostHeader"
 
-const PostTradeItem = () => {
+const PostTradeContent = ({ post }) => {
   return (
     <>
       <div className="post-category px-2">
@@ -9,7 +9,11 @@ const PostTradeItem = () => {
           <div className="text-[0.8rem]">Market</div>
         </div>
       </div>
-      <PostHeader postType="3"></PostHeader>
+      <PostHeader
+        postType={post.category}
+        user={post.user}
+        postDate={post.datePosted}
+      ></PostHeader>
       <div className="post-body">
         <div className="grid grid-cols-3">
           <div className="col-span-2">
@@ -38,4 +42,4 @@ const PostTradeItem = () => {
   )
 }
 
-export default PostTradeItem
+export default PostTradeContent

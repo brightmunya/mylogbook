@@ -18,8 +18,14 @@
 }
 
 .contacts-suggested .body .cover-image {
-  height: 55%;
+  height: 100px;
   overflow: hidden;
+}
+
+.contacts-suggested .body .cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .contacts-suggested .footer {
@@ -37,12 +43,15 @@
 }
 
 .user-card .cover-image {
-  height: 100px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  height: 120px;
   background-color: darkslategrey;
   margin-bottom: 35px;
+}
+
+.user-card .cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .user-card .profile {
@@ -52,9 +61,15 @@
   border-radius: 50%;
   background-color: chocolate;
   margin-left: 0.5em;
-  top: 60px;
+  top: 85px;
   position: absolute;
   overflow: hidden;
+}
+
+.user-card .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .user-card .summary h3 {

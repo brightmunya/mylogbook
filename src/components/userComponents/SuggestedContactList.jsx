@@ -1,4 +1,4 @@
-import contacts from "../../possibleContacts.json"
+import contacts from "../../data/possibleContacts.json"
 import SuggestedContact from "./SuggestedContact"
 //Swiper Components
 import { Swiper, SwiperSlide } from "swiper/react"

@@ -2,30 +2,25 @@ import { useState } from "react"
 
 import Navbar from "./components/Navbar"
 import FeedComponent from "./components/feedComponents/FeedComponent"
-import PostTradeItem from "./components/feedComponents/PostTradeItem"
-import PostQSL from "./components/feedComponents/PostQSL"
 import UserCard from "./components/userComponents/UserCard"
 import HomeContactsWidget from "./components/widgets/HomeContactsWidget"
 import SuggestedContactList from "./components/userComponents/SuggestedContactList"
-import PostItem from "./components/feedComponents/PostItem"
 import CreatePostsWrapper from "./components/createPosts/CreatePostsWrapper"
+import user from "./data/identity.json"
 
 function App() {
   const styleButtonPrimary =
     "border rounded-md w-full border-gray-400 h-full text-[12px]"
   const styleCard = "bg-white border border-gray-300 rounded-lg mb-2 p-2"
 
-  
-
   return (
-    
     <>
       <div>
         <Navbar></Navbar>
       </div>
       <div className="flex w-[1080px] mx-auto">
         <div className="md:shrink-0 me-2">
-          <UserCard></UserCard>
+          <UserCard identity={user}></UserCard>
           <HomeContactsWidget></HomeContactsWidget>
           <div className="w-70 h-20 bg-white border border-gray-300 rounded-lg">
             <div className="flex">
@@ -40,8 +35,7 @@ function App() {
         <div className="flex-1 px-2 ">
           <CreatePostsWrapper></CreatePostsWrapper>
           <SuggestedContactList></SuggestedContactList>
-          <FeedComponent>
-          </FeedComponent>
+          <FeedComponent></FeedComponent>
           {/* <FeedComponent>
             <PostItem></PostItem>
           </FeedComponent>

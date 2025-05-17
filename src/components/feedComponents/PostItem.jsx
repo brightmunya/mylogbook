@@ -1,5 +1,7 @@
 import PostActions from "./PostActions"
+import PostGenericContent from "./PostGenericContent"
 import PostHeader from "./PostHeader"
+import PostQSLContent from "./PostQSLContent"
 const PostItem = ({ post }) => {
   return (
     <>
@@ -9,12 +11,10 @@ const PostItem = ({ post }) => {
         postDate={post.datePosted}
       ></PostHeader>
       <div className="post-body">
-        <div className="post-text py-1 px-3">
-          <p className="text-[11pt]">{post.message}</p>
-        </div>
-        <div className="py-2 px-0">
-          <img src={post.photos[0]} width="100%" />
-        </div>
+        {post.category === 1 && (
+          <PostGenericContent post={post}></PostGenericContent>
+        )}
+        {post.category === 2 && <PostQSLContent post={post}></PostQSLContent>}
       </div>
       <PostActions></PostActions>
     </>
