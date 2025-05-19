@@ -1,0 +1,34 @@
+{
+  "pkID": 4,
+  "name": "John Doe",
+  "callsign": "M7TJB",
+  "profile": "/images/W1AW_Operator.jpg",
+  "cover": "/images/shack-photo-13.jpeg",
+  "email": "john.doe@mail.com",
+  "address": "123 Main St, Anytown, KZN, South Africa",
+  "phone": "+27 82 123 4567",
+  "awards": [
+    {
+      "name": "Amateur Radio License",
+      "date": "2020-01-01",
+      "description": "Licensed amateur radio operator.",
+      "image": "images/awards"
+    },
+    {
+      "name": "DXCC",
+      "date": "2021-06-15",
+      "description": "Worked all continents.",
+      "image": "images/awards"
+    }
+  ],
+  "bio": [
+    {
+      "text": "I am a licensed amateur radio operator with a passion for electronics and communication.",
+      "date": "2020-01-01"
+    },
+    {
+      "text": "I enjoy building my own antennas and experimenting with different modes of communication.",
+      "date": "2021-06-15"
+    }
+  ]
+}
