@@ -108,5 +108,45 @@
         "profile": ""
       }
     ]
+  },
+  {
+    "pkID": 4,
+    "user": {
+      "pkID": 1,
+      "profile": "",
+      "name": "Solomon Gimondo",
+      "callsign": "V77RM",
+      "country": "Namibia"
+    },
+    "datePosted": "2025-05-14T03:30:56",
+    "message": "I am selling a yaesu ft-991 radio, in good condition. I only used for a couple of months.",
+    "title": "Yauesu FT-991 Radio",
+    "condition": "Used",
+    "price": "R3,500",
+    "isNegotiable": "Yes",
+    "location": "Windhoek, Namibia",
+    "swaps": "Yes",
+    "photos": ["/images/hqdefault.jpg"],
+    "category": 3,
+    "likes": [
+      {
+        "pkID": 1,
+        "fkUserID": 2,
+        "name": "Leroy James",
+        "profile": ""
+      },
+      {
+        "pkID": 2,
+        "fkUserID": 3,
+        "name": "Melody Jacks",
+        "profile": ""
+      },
+      {
+        "pkID": 3,
+        "fkUserID": 4,
+        "name": "Philip Makadi",
+        "profile": ""
+      }
+    ]
   }
 ]

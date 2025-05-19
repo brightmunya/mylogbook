@@ -36,21 +36,6 @@ function App() {
           <CreatePostsWrapper></CreatePostsWrapper>
           <SuggestedContactList></SuggestedContactList>
           <FeedComponent></FeedComponent>
-          {/* <FeedComponent>
-            <PostItem></PostItem>
-          </FeedComponent>
-          <FeedComponent>
-            <PostTradeItem></PostTradeItem>
-          </FeedComponent>
-          <FeedComponent>
-            <PostTradeItem></PostTradeItem>
-          </FeedComponent>
-          <FeedComponent>
-            <PostQSL></PostQSL>
-          </FeedComponent>
-          <FeedComponent>
-            <PostItem post={newsfeed[1]}></PostItem>
-          </FeedComponent> */}
         </div>
         <div className="w-50">
           <div className="pb-3">

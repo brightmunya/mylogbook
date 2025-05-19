@@ -7,7 +7,7 @@ const FeedComponent = () => {
   const feedcontent = newsfeed.map((post, i) => (
     <div
       key={i}
-      className="w-full min-h-50 bg-white border border-gray-300 rounded-md mb-3"
+      className="w-full min-h-50 bg-white border border-gray-300 rounded-lg mb-3"
     >
       <PostItem post={post}></PostItem>
     </div>

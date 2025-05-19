@@ -1,0 +1,182 @@
+[
+  {
+    "pkID": 1,
+    "userID": 1,
+    "friendID": 2,
+    "status": "accepted",
+    "createdAt": "2023-01-01T10:00:00Z",
+    "updatedAt": "2023-01-02T10:00:00Z",
+    "friend": {
+      "pkID": 2,
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "profilePicture": "https://pixabay.com/get/ga6a186275df321a297c1cc2ff206b3a0b40416d7d45967d26144dc3ab9fbe304724fee79953855dfcb8db8a8ea985ae9_640.jpg",
+      "bio": "Graphic Designer",
+      "location": "New York, NY",
+      "age": 28,
+      "callsign": "JK09LL"
+    }
+  },
+  {
+    "pkID": 2,
+    "userID": 1,
+    "friendID": 3,
+    "status": "pending",
+    "createdAt": "2023-01-03T10:00:00Z",
+    "updatedAt": "2023-01-04T10:00:00Z",
+    "friend": {
+      "pkID": 3,
+      "name": "Alice Johnson",
+      "email": "alice.johnson@example.com",
+      "profilePicture": "https://pixabay.com/get/g8dc44d5eea12f6b74f1a576511d9c37736aec044a20c374d0a3b18671d87b7cb231e22fc02f8cc65533d120879a7f4e6_640.jpg",
+      "bio": "Software Engineer",
+      "location": "San Francisco, CA",
+      "age": 30,
+      "callsign": "AL30CE"
+    }
+  },
+  {
+    "pkID": 3,
+    "userID": 1,
+    "friendID": 4,
+    "status": "rejected",
+    "createdAt": "2023-01-05T10:00:00Z",
+    "updatedAt": "2023-01-06T10:00:00Z",
+    "friend": {
+      "pkID": 4,
+      "name": "Bob Brown",
+      "email": "bob.brown@example.com",
+      "profilePicture": "https://pixabay.com/get/g54847bb12cddcc3b3cdf822a1a0b265baebf61038537bc3cd694984270c97d58d4eef2560e999fadeb68adaa34d4fe6b_640.jpg",
+      "bio": "Product Manager",
+      "location": "Los Angeles, CA",
+      "age": 35,
+      "callsign": "BOB34"
+    }
+  },
+  {
+    "pkID": 4,
+    "userID": 1,
+    "friendID": 5,
+    "status": "accepted",
+    "createdAt": "2023-01-07T10:00:00Z",
+    "updatedAt": "2023-01-08T10:00:00Z",
+    "friend": {
+      "pkID": 5,
+      "name": "Charlie Davis",
+      "email": "charlie.davis@example.com",
+      "profilePicture": "https://pixabay.com/get/g3dfa709e8e1aedd7c4c078f2d6004da12a58eded808dc687eca82fd88087cd93e365e4391531e006c24f344f8e6821ec_640.jpg",
+      "bio": "Data Scientist",
+      "location": "Austin, TX",
+      "age": 32,
+      "callsign": "CHAR32"
+    }
+  },
+  {
+    "pkID": 5,
+    "userID": 1,
+    "friendID": 6,
+    "status": "accepted",
+    "createdAt": "2023-01-09T10:00:00Z",
+    "updatedAt": "2023-01-10T10:00:00Z",
+    "friend": {
+      "pkID": 6,
+      "name": "Diana Prince",
+      "email": "diana.prince@example.com",
+      "profilePicture": "https://pixabay.com/get/g63643fd3e117cd62e5ba0d2df820731551e9d7228d678d5434bbf3219f3e2f86cffd0eaad81d49adea5cf728153bc1fd_640.jpg",
+      "bio": "Wonder Woman",
+      "location": "Themyscira",
+      "age": 30,
+      "callsign": "DIA30"
+    }
+  },
+  {
+    "pkID": 6,
+    "userID": 1,
+    "friendID": 7,
+    "status": "accepted",
+    "createdAt": "2023-01-11T10:00:00Z",
+    "updatedAt": "2023-01-12T10:00:00Z",
+    "friend": {
+      "pkID": 7,
+      "name": "Ethan Hunt",
+      "email": "ethan.hunt@example.com",
+      "profilePicture": "https://pixabay.com/get/g188b9019da5dbacd0560d129bab01ffac2fba94fa61987fa5968dd5e539f14a48d1ed05eb41ace03b7e8f4f2fc85374b_640.jpg",
+      "bio": "Secret Agent",
+      "location": "Washington, D.C.",
+      "age": 40,
+      "callsign": "ETH40"
+    }
+  },
+  {
+    "pkID": 7,
+    "userID": 1,
+    "friendID": 8,
+    "status": "accepted",
+    "createdAt": "2023-01-13T10:00:00Z",
+    "updatedAt": "2023-01-14T10:00:00Z",
+    "friend": {
+      "pkID": 8,
+      "name": "Felicity Smoak",
+      "email": "felicity.smoak@example.com",
+      "profilePicture": "https://pixabay.com/get/g1dad474768b1eb8645f4f5678e86d05bdb73224b77b79aa90a4767f0494ae08cf8759a6b25f1db1ebd2630795614d8c5_640.jpg",
+      "bio": "IT Specialist",
+      "location": "Star City, CA",
+      "age": 29,
+      "callsign": "FEL29"
+    }
+  },
+  {
+    "pkID": 8,
+    "userID": 1,
+    "friendID": 9,
+    "status": "accepted",
+    "createdAt": "2023-01-15T10:00:00Z",
+    "updatedAt": "2023-01-16T10:00:00Z",
+    "friend": {
+      "pkID": 9,
+      "name": "Gordon Ramsay",
+      "email": "gordon.ramsay@example.com",
+      "profilePicture": "https://pixabay.com/get/gcec01a85caf25bc676cf654b2881b1af97a866ea35637d4b1fcc3b37b89da6212c6663ca1523a2825f8b05dd8793a594_640.jpg",
+      "bio": "Celebrity Chef",
+      "location": "London, UK",
+      "age": 55,
+      "callsign": "GOR55"
+    }
+  },
+  {
+    "pkID": 9,
+    "userID": 1,
+    "friendID": 10,
+    "status": "accepted",
+    "createdAt": "2023-01-17T10:00:00Z",
+    "updatedAt": "2023-01-18T10:00:00Z",
+    "friend": {
+      "pkID": 10,
+      "name": "Harry Potter",
+      "email": "harry.potter@example.com",
+      "profilePicture": "https://pixabay.com/get/gcf96cc00067fb84079d7b06ae3635ab8e5f1ea4edc5692a2bf3d8ee63b3735de1fd85ef327b502812a205b59b79d934c_640.jpg",
+      "bio": "Wizard",
+      "location": "Hogwarts",
+      "age": 35,
+      "callsign": "HARRY35"
+    }
+  },
+  {
+    "pkID": 10,
+    "userID": 1,
+    "friendID": 11,
+    "status": "accepted",
+    "createdAt": "2023-01-19T10:00:00Z",
+    "updatedAt": "2023-01-20T10:00:00Z",
+    "friend": {
+      "pkID": 11,
+      "name": "Irene Adler",
+      "email": "irene.adler@example.com",
+      "profilePicture": "https://pixabay.com/get/g65c2c57ee6c4264a1b58e249fb30501b27570610bb5fc1577d5fe5f16d6ab66474516307f2474ef7a44813f4df68c416_640.jpg",
+      "bio": "Consulting Detective",
+      "location": "London, UK",
+      "age": 34,
+      "callsign": "IRE34"
+    }
+  }
+]
